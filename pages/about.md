@@ -13,7 +13,6 @@ permalink: /about/
 ## 联系
 
 {% for website in site.data.social %}
-* {{ website.sitename }}：[@{{ website.name }}]({{ website.url }})
 * {{ website.sitename }}：<a href="{{website.url}}" target="_blank">@{{ website.name }}</a>
 {% endfor %}
 
