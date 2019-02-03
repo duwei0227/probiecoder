@@ -13,3 +13,8 @@ Python使用过程中一些有用但是不常用的设置等。
 import warnings
 warnings.filterwarning('ignore)
 ```
+
+### 2、pandas显示列数
+```
+ pd.options.display.max_columns=90
+```
