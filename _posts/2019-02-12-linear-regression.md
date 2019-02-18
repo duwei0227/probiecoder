@@ -284,7 +284,7 @@ plt.plot(X_test, y_test)
 
 
 
-![png](../images/output_13_1.png)
+![png](/images/output_13_1.png)
 
 
 
@@ -300,7 +300,7 @@ plt.scatter(X_test, y_test)
 
 
 
-![png](../images/output_14_1.png)
+![png](/images/output_14_1.png)
 
 
 $$MSE = \frac{1}{2m}\sum_{i = 0}^m(y_pred - y)^2 + penalty$$
@@ -640,7 +640,7 @@ plt.ylabel('training error')
 
 
 
-![png](../images/output_36_1.png)
+![png](/images/output_36_1.png)
 
 
 
@@ -657,5 +657,5 @@ plt.plot(X_test, y_pred, 'y')
 
 
 
-![png](../images/output_37_1.png)
+![png](/images/output_37_1.png)
 
