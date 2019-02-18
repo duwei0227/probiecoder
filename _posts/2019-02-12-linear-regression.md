@@ -1,12 +1,12 @@
 ---
 layout: post
-title: 线性回归--个人理解整理
+title: 线性回归个人理解整理
 categories: [机器学习]
-description: 线性回归--个人理解整理
+description: 线性回归个人理解整理
 keywords: 机器学习, 线性回归
 ---
 
-线性回归--个人理解整理
+线性回归个人理解整理
 
 
 
