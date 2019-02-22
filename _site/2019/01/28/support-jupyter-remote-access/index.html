@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans" prefix="og: http://ogp.me/ns#" class="han-init">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>支持jupyter远程访问 &mdash; 菜鸟之家</title>
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/primer-css/css/primer.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/primer-markdown/dist/user-content.min.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/octicons/octicons/octicons.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/components/collection.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/components/repo-card.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/sections/repo-list.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/sections/mini-repo-list.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/components/boxed-group.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/globals/common.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/share.js/dist/css/share.min.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/globals/responsive.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/posts/index.css">
+    <!-- Latest compiled and minified CSS -->
+    
+
+    
+    <link rel="canonical" href="http://localhost:4000/2019/01/28/support-jupyter-remote-access/">
+    <link rel="alternate" type="application/atom+xml" title="菜鸟之家" href="http://localhost:4000/feed.xml">
+    <link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+    
+    <meta property="og:title" content="支持jupyter远程访问">
+      
+    <meta name="keywords" content="jupyter, 远程访问">
+    <meta name="og:keywords" content="jupyter, 远程访问">
+      
+    <meta name="description" content="支持jupyter远程访问">
+    <meta name="og:description" content="支持jupyter远程访问">
+      
+    
+    
+        
+    
+    <meta property="og:url" content="http://localhost:4000/2019/01/28/support-jupyter-remote-access/">
+    <meta property="og:site_name" content="菜鸟之家">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN" />
+    
+    <meta property="article:published_time" content="2019-01-28">
+    
+    <script src="http://localhost:4000/assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="http://localhost:4000/assets/js/jquery-ui.js"></script>
+    <script src="http://localhost:4000/assets/js/main.js"></script>
+</head>
+<body class="" data-mz="">
+    <header class="site-header">
+        <div class="container">
+            <h1><a href="http://localhost:4000/" title="菜鸟之家"><span class="octicon octicon-mark-github"></span> 菜鸟之家</a></h1>
+            <button class="collapsed mobile-visible" type="button" onclick="toggleMenu();">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <nav class="site-header-nav" role="navigation">
+                
+                <a href="http://localhost:4000/" class=" site-header-nav-item" target="" title="首页">首页</a>
+                
+                <a href="http://localhost:4000/categories/" class=" site-header-nav-item" target="" title="分类">分类</a>
+                
+                <a href="http://localhost:4000/links/" class=" site-header-nav-item" target="" title="链接">链接</a>
+                
+                <a href="http://localhost:4000/about/" class=" site-header-nav-item" target="" title="关于">关于</a>
+                
+            </nav>
+        </div>
+    </header>
+    <!-- / header -->
+
+    <section class="collection-head small geopattern" data-pattern-id="支持jupyter远程访问">
+<div class="container">
+  <div class="columns">
+    <div class="column three-fourths">
+      <div class="collection-title">
+        <h1 class="collection-header">支持jupyter远程访问</h1>
+        <div class="collection-info">
+          
+          <span class="meta-info">
+            <span class="octicon octicon-calendar"></span> 2019/01/28
+          </span>
+          
+          
+          <span class="meta-info">
+            <span class="octicon octicon-file-directory"></span>
+            <a href="http://localhost:4000/categories/#Python" title="Python">Python</a>
+          </span>
+          
+          <span class="meta-info">
+            <span class="octicon octicon-file-directory"></span>
+            <a href="http://localhost:4000/categories/#Jupyter" title="Jupyter">Jupyter</a>
+          </span>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<!-- / .banner -->
+<section class="container content">
+<div class="columns">
+  <div class="column three-fourths" >
+    <article class="article-content markdown-body">
+    <p>支持jupyter远程访问</p>
+
+<h4 id="1生成jupyter-config文件">1、生成jupyter config文件</h4>
+<p><code class="highlighter-rouge">jupyter notebook --generate-config</code><br />
+文件默认生成路径为：
+<code class="highlighter-rouge">~/.jupyter/jupyter_notebook_config.py</code></p>
+
+<h4 id="2生成密码配置文件中需要">2、生成密码，配置文件中需要</h4>
+<pre><code class="language-Python">ipython
+from notebook.auth import passwd
+passwd()
+Enter password: 
+Verify password:
+</code></pre>
+
+<h4 id="3编辑第一步生成的config文件">3、编辑第一步生成的config文件</h4>
+<p>修改如下内容：</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>c.NotebookApp.ip='*'
+c.NotebookApp.password = u'sha:ce...刚才复制的那个密文'
+c.NotebookApp.open_browser = False
+c.NotebookApp.port =8888 #可自行指定一个端口, 访问时使用该端口
+</code></pre></div></div>
+
+<h4 id="4启动异常">4、启动异常</h4>
+<p>如果启动时提示如下异常：</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>raceback (most recent call last):
+  File "/home/duwei0227/anaconda3/lib/python3.7/site-packages/traitlets/traitlets.py", line 528, in get
+    value = obj._trait_values[self.name]
+KeyError: 'allow_remote_access'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/duwei0227/anaconda3/lib/python3.7/site-packages/notebook/notebookapp.py", line 864, in _default_allow#c.NotebookApp.file_to_run = ''
+_remote
+    addr = ipaddress.ip_address(self.ip)
+  File "/home/duwei0227/anaconda3/lib/python3.7/ipaddress.py", line 54, in ip_address
+    address)
+ValueError: '' does not appear to be an IPv4 or IPv6 address
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/duwei0227/anaconda3/bin/jupyter-notebook", line 11, in &lt;module&gt;
+    sys.exit(main())
+  File "/home/duwei0227/anaconda3/lib/python3.7/site-packages/jupyter_core/application.py", line 266, in launch_instance
+    return super(JupyterApp, cls).launch_instance(argv=argv, **kwargs)
+  File "/home/duwei0227/anaconda3/lib/python3.7/site-packages/traitlets/config/application.py", line 657, in launch_instance
+    app.initialize(argv)
+  File "&lt;decorator-gen-7&gt;", line 2, in initialize
+  File "/home/duwei0227/anaconda3/lib/python3.7/site-packages/traitlets/config/application.py", line 87, in catch_config_error
+    return method(app, *args, **kwargs)
+  File "/home/duwei0227/anaconda3/lib/python3.7/site-packages/notebook/notebookapp.py", line 1628, in initialize
+    self.init_webapp()
+  File "/home/duwei0227/anaconda3/lib/python3.7/site-packages/notebook/notebookapp.py", line 1378, in init_webapp
+    self.jinja_environment_options,
+  File "/home/duwei0227/anaconda3/lib/python3.7/site-packages/notebook/notebookapp.py", line 159, in __init__
+    default_url, settings_overrides, jinja_env_options)
+  File "/home/duwei0227/anaconda3/lib/python3.7/site-packages/notebook/notebookapp.py", line 252, in init_settings
+    allow_remote_access=jupyter_app.allow_remote_access,
+  File "/home/duwei0227/anaconda3/lib/python3.7/site-packages/traitlets/traitlets.py", line 556, in __get__
+    return self.get(obj, cls)
+  File "/home/duwei0227/anaconda3/lib/python3.7/site-packages/traitlets/traitlets.py", line 535, in get
+    value = self._validate(obj, dynamic_default())
+  File "/home/duwei0227/anaconda3/lib/python3.7/site-packages/notebook/notebookapp.py", line 867, in _default_allow_remote
+    for info in socket.getaddrinfo(self.ip, self.port, 0, socket.SOCK_STREAM):
+  File "/home/duwei0227/anaconda3/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+</code></pre></div></div>
+<p>可以修改 <code class="highlighter-rouge">c.NotebookApp.ip = '0.0.0.0'</code></p>
+
+<p>参考：<br />
+<a href="https://blog.csdn.net/simple_the_best/article/details/77005400">https://blog.csdn.net/simple_the_best/article/details/77005400</a>
+<a href="https://blog.csdn.net/u013042928/article/details/83382336">https://blog.csdn.net/u013042928/article/details/83382336</a></p>
+
+    </article>
+    <div class="share">
+      <div class="share-component"></div>
+    </div>
+  </div>
+  <div class="column one-fourth">
+    
+<h3>Search</h3>
+<div id="site_search">
+    <input type="text" id="search_box" placeholder="Search">
+</div>
+
+<ul id="search_results"></ul>
+
+<link rel="stylesheet" type="text/css" href="http://localhost:4000/assets/css/modules/sidebar-search.css">
+<script src="http://localhost:4000/assets/js/simple-jekyll-search.min.js"></script>
+<script src="http://localhost:4000/assets/js/search.js"></script>
+
+<script type="text/javascript">
+SimpleJekyllSearch({
+    searchInput: document.getElementById('search_box'),
+    resultsContainer: document.getElementById('search_results'),
+    json: 'http://localhost:4000/assets/search_data.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+    noResultsText: 'No results found',
+    limit: 10,
+    fuzzy: false,
+    exclude: ['Welcome']
+})
+</script>
+
+    
+
+    
+<h3 class="post-directory-title mobile-hidden">Table of Contents</h3>
+<div id="post-directory-module" class="mobile-hidden">
+  <section class="post-directory">
+  <!-- Links that trigger the jumping -->
+  <!-- Added by javascript below -->
+  <dl></dl>
+  </section>
+</div>
+
+<script src="http://localhost:4000/assets/js/jquery.toc.js"></script>
+
+  </div>
+</div>
+</section>
+<!-- /section.content -->
+
+    <footer class="container">
+        <div class="site-footer" role="contentinfo">
+            <div class="copyright left mobile-block">
+                    © 2019
+                    <span title="Tony Du">Tony Du</span>
+                    <a href="javascript:window.scrollTo(0,0)" class="right mobile-visible">TOP</a>
+            </div>
+
+            <ul class="site-footer-links right mobile-hidden">
+                <li>
+                    <a href="javascript:window.scrollTo(0,0)" >TOP</a>
+                </li>
+            </ul>
+            <a href="https://github.com/duwei0227/probiecoder" target="_blank" aria-label="view source code">
+                <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+            </a>
+            <ul class="site-footer-links mobile-hidden">
+                
+                <li>
+                    <a href="http://localhost:4000/" title="首页" target="">首页</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:4000/categories/" title="分类" target="">分类</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:4000/links/" title="链接" target="">链接</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:4000/about/" title="关于" target="">关于</a>
+                </li>
+                
+                <li><a href="http://localhost:4000/feed.xml"><span class="octicon octicon-rss" style="color:orange;"></span></a></li>
+            </ul>
+
+        </div>
+    </footer>
+    <div class="tools-wrapper">
+      <a class="gotop" href="#" title="回到顶部"><span class="octicon octicon-arrow-up"></span></a>
+    </div>
+    <!-- / footer -->
+    <script src="http://localhost:4000/assets/vendor/share.js/dist/js/share.min.js"></script>
+    <script src="http://localhost:4000/assets/js/geopattern.js"></script>
+    <script src="http://localhost:4000/assets/js/prism.js"></script>
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/globals/prism.css">
+    <script>
+      jQuery(document).ready(function($) {
+        // geopattern
+        $('.geopattern').each(function(){
+          $(this).geopattern($(this).data('pattern-id'));
+        });
+       // hljs.initHighlightingOnLoad();
+      });
+    </script>
+
+    
+
+    
+
+    
+
+    
+
+    
+</body>
+</html>
