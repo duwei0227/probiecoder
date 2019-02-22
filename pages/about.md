@@ -3,7 +3,7 @@ layout: page
 title: About
 description: 一个码农的修仙之旅
 keywords: Du Wei, Tony Du, 杜伟
-comments: true
+comments: false
 menu: 关于
 permalink: /about/
 ---
