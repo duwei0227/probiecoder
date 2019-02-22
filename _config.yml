@@ -82,13 +82,3 @@ collections:
         permalink: /wiki/:path/
 
 repository: duwei0227/probiecoder
-
-# ---------------- #
-#      Search      #
-# ---------------- #
-simple_jekyll_search:
-    # 是否支持全文搜索
-    fulltext: true
-    # 最多显示多少条搜索结果
-    limit: 10
-

@@ -123,31 +123,6 @@ warnings.filterwarning('ignore)
   </div>
   <div class="column one-fourth">
     
-<h3>Search</h3>
-<div id="site_search">
-    <input type="text" id="search_box" placeholder="Search">
-</div>
-
-<ul id="search_results"></ul>
-
-<link rel="stylesheet" type="text/css" href="http://localhost:4000/assets/css/modules/sidebar-search.css">
-<script src="http://localhost:4000/assets/js/simple-jekyll-search.min.js"></script>
-<script src="http://localhost:4000/assets/js/search.js"></script>
-
-<script type="text/javascript">
-SimpleJekyllSearch({
-    searchInput: document.getElementById('search_box'),
-    resultsContainer: document.getElementById('search_results'),
-    json: 'http://localhost:4000/assets/search_data.json',
-    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
-    noResultsText: 'No results found',
-    limit: 10,
-    fuzzy: false,
-    exclude: ['Welcome']
-})
-</script>
-
-    
 
     
 <h3 class="post-directory-title mobile-hidden">Table of Contents</h3>
