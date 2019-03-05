@@ -12,3 +12,12 @@ JavaScript较少用配置
 ```js
 $.extent(dest_obj, src_obj)
 ```
+
+### 2、base64编码
+```js
+//编码
+window.btoa('base64)   // YmFzZTY0
+
+//解码
+window.atob('YmFzZTY0)  // base64
+```
