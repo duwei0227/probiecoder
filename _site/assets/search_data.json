@@ -42,6 +42,13 @@
   
   
   
+    {
+      "title"    : "Wiki",
+      "url"      : "http://localhost:4000/wiki/"
+    } ,
+  
+  
+  
   
   
   
@@ -105,6 +112,27 @@
       "category" : "机器学习",
       
       "url"      : "http://localhost:4000/2019/02/21/gini/"
+    } ,
+  
+    {
+      "title"    : "SQL知识点",
+      "category" : "SQL",
+      
+      "url"      : "http://localhost:4000/2019/03/04/sql/"
+    } ,
+  
+    {
+      "title"    : "Git",
+      "category" : "Git",
+      
+      "url"      : "http://localhost:4000/wiki/2019-03-07-git/"
+    } ,
+  
+    {
+      "title"    : "Wiki Template",
+      "category" : "cate1",
+      
+      "url"      : "http://localhost:4000/wiki/template/"
     } 
   
 ]

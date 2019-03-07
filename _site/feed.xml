@@ -1,4 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-02-22T13:51:02+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">菜鸟之家</title><subtitle>杜伟的个人博客</subtitle><author><name>Tony Du</name></author><entry><title type="html">熵的简单理解</title><link href="http://localhost:4000/2019/02/21/entropy/" rel="alternate" type="text/html" title="熵的简单理解" /><published>2019-02-21T00:00:00+08:00</published><updated>2019-02-21T00:00:00+08:00</updated><id>http://localhost:4000/2019/02/21/entropy</id><content type="html" xml:base="http://localhost:4000/2019/02/21/entropy/">&lt;p&gt;熵知识点记录&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-03-07T19:35:19+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">菜鸟之家</title><subtitle>杜伟的个人博客</subtitle><author><name>Tony Du</name></author><entry><title type="html">SQL知识点</title><link href="http://localhost:4000/2019/03/04/sql/" rel="alternate" type="text/html" title="SQL知识点" /><published>2019-03-04T00:00:00+08:00</published><updated>2019-03-04T00:00:00+08:00</updated><id>http://localhost:4000/2019/03/04/sql</id><content type="html" xml:base="http://localhost:4000/2019/03/04/sql/">&lt;p&gt;SQL知识点记录&lt;/p&gt;
+
+&lt;h3 id=&quot;1oracle查询支持正则化&quot;&gt;1、Oracle查询支持正则化&lt;/h3&gt;
+&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;job&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;where&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;regexp_like&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'^[0-9]+'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Tony Du</name></author><summary type="html">SQL知识点记录</summary></entry><entry><title type="html">基尼指数的简单理解</title><link href="http://localhost:4000/2019/02/21/gini/" rel="alternate" type="text/html" title="基尼指数的简单理解" /><published>2019-02-21T00:00:00+08:00</published><updated>2019-02-21T00:00:00+08:00</updated><id>http://localhost:4000/2019/02/21/gini</id><content type="html" xml:base="http://localhost:4000/2019/02/21/gini/">&lt;p&gt;基尼指数知识点记录&lt;/p&gt;
+
+&lt;h3 id=&quot;基尼指数-gini&quot;&gt;基尼指数 Gini&lt;/h3&gt;
+&lt;p&gt;定义：分类问题中，假设有K个类，样本点属于第k类的概率为$p_k$，则概率分布的基尼指数为：
+&lt;script type=&quot;math/tex&quot;&gt;Gini(p) = \sum_{k=1}^Kp_k(1 - p_k)&lt;/script&gt;
+对于二分类问题，若样本点属于第一个类的概率是p，则概率分布的基尼指数为
+&lt;script type=&quot;math/tex&quot;&gt;Gini(p) = 2p(1 - p)&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;对于给定的样本集合D，其基尼指数为
+&lt;script type=&quot;math/tex&quot;&gt;Gini(D) = 1 - \sum_{k=1}^K\Big(\frac{|C_k|}{|D|}\Big)^2&lt;/script&gt;
+这里，$C_k$是D中属于第k类的样本子集&lt;br /&gt;
+在特征A的条件下，集合D的基尼指数定义为
+&lt;script type=&quot;math/tex&quot;&gt;Gini(D, A) = \sum_{i=1}^n\frac{|D_i|}{|D|}Gini(D_i)&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;基尼指数表示集合的不确定性，基尼指数越大，样本集合的不确定性也就越大，与熵类似&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;参考 《统计学习》李航&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>Tony Du</name></author><summary type="html">基尼指数知识点记录</summary></entry><entry><title type="html">熵的简单理解</title><link href="http://localhost:4000/2019/02/21/entropy/" rel="alternate" type="text/html" title="熵的简单理解" /><published>2019-02-21T00:00:00+08:00</published><updated>2019-02-21T00:00:00+08:00</updated><id>http://localhost:4000/2019/02/21/entropy</id><content type="html" xml:base="http://localhost:4000/2019/02/21/entropy/">&lt;p&gt;熵知识点记录&lt;/p&gt;
 
 &lt;h2 id=&quot;熵&quot;&gt;熵&lt;/h2&gt;
 &lt;p&gt;定义：表示随机变量不确定性的度量&lt;br /&gt;
@@ -40,25 +62,7 @@ ps：特征各取值的经验概率 * 划分子集的熵&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;参考 《统计学习》李航&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name>Tony Du</name></author><summary type="html">熵知识点记录</summary></entry><entry><title type="html">基尼指数的简单理解</title><link href="http://localhost:4000/2019/02/21/gini/" rel="alternate" type="text/html" title="基尼指数的简单理解" /><published>2019-02-21T00:00:00+08:00</published><updated>2019-02-21T00:00:00+08:00</updated><id>http://localhost:4000/2019/02/21/gini</id><content type="html" xml:base="http://localhost:4000/2019/02/21/gini/">&lt;p&gt;基尼指数知识点记录&lt;/p&gt;
-
-&lt;h3 id=&quot;基尼指数-gini&quot;&gt;基尼指数 Gini&lt;/h3&gt;
-&lt;p&gt;定义：分类问题中，假设有K个类，样本点属于第k类的概率为$p_k$，则概率分布的基尼指数为：
-&lt;script type=&quot;math/tex&quot;&gt;Gini(p) = \sum_{k=1}^Kp_k(1 - p_k)&lt;/script&gt;
-对于二分类问题，若样本点属于第一个类的概率是p，则概率分布的基尼指数为
-&lt;script type=&quot;math/tex&quot;&gt;Gini(p) = 2p(1 - p)&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;对于给定的样本集合D，其基尼指数为
-&lt;script type=&quot;math/tex&quot;&gt;Gini(D) = 1 - \sum_{k=1}^K\Big(\frac{|C_k|}{|D|}\Big)^2&lt;/script&gt;
-这里，$C_k$是D中属于第k类的样本子集&lt;br /&gt;
-在特征A的条件下，集合D的基尼指数定义为
-&lt;script type=&quot;math/tex&quot;&gt;Gini(D, A) = \sum_{i=1}^n\frac{|D_i|}{|D|}Gini(D_i)&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;基尼指数表示集合的不确定性，基尼指数越大，样本集合的不确定性也就越大，与熵类似&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;参考 《统计学习》李航&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name>Tony Du</name></author><summary type="html">基尼指数知识点记录</summary></entry><entry><title type="html">线性回归个人理解整理</title><link href="http://localhost:4000/2019/02/12/linear-regression/" rel="alternate" type="text/html" title="线性回归个人理解整理" /><published>2019-02-12T00:00:00+08:00</published><updated>2019-02-12T00:00:00+08:00</updated><id>http://localhost:4000/2019/02/12/linear-regression</id><content type="html" xml:base="http://localhost:4000/2019/02/12/linear-regression/">&lt;p&gt;线性回归个人理解整理&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>Tony Du</name></author><summary type="html">熵知识点记录</summary></entry><entry><title type="html">线性回归个人理解整理</title><link href="http://localhost:4000/2019/02/12/linear-regression/" rel="alternate" type="text/html" title="线性回归个人理解整理" /><published>2019-02-12T00:00:00+08:00</published><updated>2019-02-12T00:00:00+08:00</updated><id>http://localhost:4000/2019/02/12/linear-regression</id><content type="html" xml:base="http://localhost:4000/2019/02/12/linear-regression/">&lt;p&gt;线性回归个人理解整理&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;
@@ -562,6 +566,14 @@ array([[ 1.,  0.,  1.,  2.,  0.,  0.,  0.,  1.,  2.,  4.],
 
 &lt;h3 id=&quot;1对象深拷贝也可以用于合并&quot;&gt;1、对象深拷贝,也可以用于合并&lt;/h3&gt;
 &lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;extent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dest_obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;src_obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;2base64编码&quot;&gt;2、base64编码&lt;/h3&gt;
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//编码&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;btoa&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'base64)   // YmFzZTY0
+
+//解码
+window.atob('&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;YmFzZTY0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// base64&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Tony Du</name></author><summary type="html">JavaScript较少用配置</summary></entry><entry><title type="html">Java较少用配置</title><link href="http://localhost:4000/2019/02/02/java/" rel="alternate" type="text/html" title="Java较少用配置" /><published>2019-02-02T00:00:00+08:00</published><updated>2019-02-02T00:00:00+08:00</updated><id>http://localhost:4000/2019/02/02/java</id><content type="html" xml:base="http://localhost:4000/2019/02/02/java/">&lt;p&gt;Java较少用配置&lt;/p&gt;
 
 &lt;h3 id=&quot;1hibernate框架mysql数据库id主键自增&quot;&gt;1、Hibernate框架mysql数据库id主键自增&lt;/h3&gt;

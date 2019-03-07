@@ -33,6 +33,18 @@
 <lastmod>2019-02-21T00:00:00+08:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/2019/03/04/sql/</loc>
+<lastmod>2019-03-04T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/wiki/2019-03-07-git/</loc>
+<lastmod>2019-03-07T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/wiki/template/</loc>
+<lastmod>2019-03-07T19:35:19+08:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/about/</loc>
 </url>
 <url>
@@ -46,5 +58,8 @@
 </url>
 <url>
 <loc>http://localhost:4000/open-source/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/wiki/</loc>
 </url>
 </urlset>

@@ -1,12 +1,12 @@
 ---
 layout: post
-title: JavaScript较少用配置
+title: JavaScript知识点
 categories: [JavaScript]
-description: JavaScript较少用配置
+description: JavaScript知识点
 keywords: JavaScript, Jquery
 ---
 
-JavaScript较少用配置
+JavaScript知识点
 
 ### 1、对象深拷贝,也可以用于合并
 ```js
