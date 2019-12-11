@@ -8,7 +8,7 @@ keywords: Java, BufferedReader
 
 BufferedReader使用记录
 
-一种以缓冲方式读取字符IO流，可以指定缓冲空间大小，默认为8912  
+一种以缓冲方式读取字符IO流，可以指定缓冲空间大小，默认为8192 
 
 常见读取有如下三种方式：
 
