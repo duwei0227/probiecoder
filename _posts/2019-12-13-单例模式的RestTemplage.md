@@ -62,3 +62,16 @@ public enum RestTemplateUtil {
     }
 }
 ```
+
+#### 4、私有类模式
+```java
+public class RestTemplateUtil {
+    private static class LazySingleton {
+        private static final Singleton INSTANCE = new RestTemplateUtil();
+    }
+
+    public static RestTemplateUtil getRestTemplateUtil() {
+        return LazySingleton.INSTANCE;
+    }
+}
+```
